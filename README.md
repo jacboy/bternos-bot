@@ -1,5 +1,5 @@
 # bternos-bot
-Bternos (souɹǝʇq) is a bot that automatically flips the last tweet of anther account
+Bternos (souɹǝʇq) is a bot that automatically flips the last tweet of another account
 
 #features
 - Gets last tweet of a person
