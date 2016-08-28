@@ -20,11 +20,13 @@ error_reporting(E_ALL);
 
     $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 
+    // Replace these variables
     $oauth_access_token = "XXX";
     $oauth_access_token_secret = "XXX";
     $consumer_key = "XXX";
     $consumer_secret = "XXX";
     $username = "vantezzen";
+    // STOP editing here
 
     $oauth = array( 'screen_name' => $username,
            	    'count' => 1,
@@ -112,8 +114,7 @@ if (isset($twitter_data[0]["entities"]["media"][0]["media_url"])) {
             // Result is a json string
             $res = json_decode($json);
             // Extract media id
-            $mediaid = $res->media_id_string;// Send tweet with uploaded image
-            echo $mediaid;
+            $mediaid = $res->media_id_string;
 }
 
 $url = 'https://api.twitter.com/1.1/statuses/update.json';
