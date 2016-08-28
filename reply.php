@@ -24,8 +24,9 @@ error_reporting(E_ALL);
     $oauth_access_token_secret = "XXX";
     $consumer_key = "XXX";
     $consumer_secret = "XXX";
+    $username = "vantezzen";
 
-    $oauth = array( 'screen_name' => 'USERNAME',
+    $oauth = array( 'screen_name' => $username,
            	    'count' => 1,
 		    'oauth_consumer_key' => $consumer_key,
                     'oauth_nonce' => time(),
@@ -44,7 +45,7 @@ error_reporting(E_ALL);
     $options = array( CURLOPT_HTTPHEADER => $header,
                       //CURLOPT_POSTFIELDS => $postfields,
                       CURLOPT_HEADER => false,
-                      CURLOPT_URL => $url . '?screen_name=USERNAME&count=1',
+                      CURLOPT_URL => $url . '?screen_name='.$username.'&count=1',
                       CURLOPT_RETURNTRANSFER => true,
                       CURLOPT_SSL_VERIFYPEER => false);
 
